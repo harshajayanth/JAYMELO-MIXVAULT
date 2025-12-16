@@ -15,6 +15,15 @@ export default function LoginPage() {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
 
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLocation("/");
+    }
+  }, [isAuthenticated, setLocation]);
+
+
   // Prevent scroll on login page
   useEffect(() => {
     const originalHtmlOverflow = document.documentElement.style.overflow;
