@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": "vocal",
+      "name": "Vocal",
+      "icon": "Mic",
+      "chains": [
+        {
+          "id": "pop-vocals",
+          "name": "Pop Vocals",
+          "description": "Crisp, modern pop vocal chain aimed at cutting through dense mixes.",
+          "steps": [
+            {
+              "name": "Subtractive EQ",
+              "settings": { "Low Cut": "100Hz", "Mud Cut": "-3dB @ 300Hz" }
+            },
+            {
+              "name": "Compression",
+              "settings": { "Ratio": "4:1", "Attack": "Fast", "Release": "Medium", "Threshold": "-10dB" }
+            },
+            {
+              "name": "Saturation",
+              "settings": { "Drive": "20%", "Type": "Tape" }
+            },
+            {
+              "name": "De-Esser",
+              "settings": { "Frequency": "7kHz", "Reduction": "-4dB" }
+            }
+          ],
+          "downloadUrl": "#",
+          "referenceImages": ["https://images.unsplash.com/photo-1516280440614-6697288d5d38?auto=format&fit=crop&q=80&w=1000"]
+        },
+        {
+          "id": "vocal-bus",
+          "name": "Vocal Bus",
+          "description": "Glue compression and polish for the entire vocal group.",
+          "steps": [
+            { "name": "Bus Compressor", "settings": { "Ratio": "2:1", "Attack": "30ms", "Release": "Auto" } },
+            { "name": "Air EQ", "settings": { "High Shelf": "+2dB @ 12kHz" } }
+          ],
+          "downloadUrl": "#"
+        }
+      ]
+    },
+    {
+      "id": "guitar",
+      "name": "Guitar",
+      "icon": "Guitar",
+      "chains": [
+        {
+          "id": "acoustic-strum",
+          "name": "Acoustic Strum",
+          "description": "Bright and wide acoustic guitar processing.",
+          "steps": [
+            { "name": "EQ", "settings": { "Low Cut": "120Hz", "Sparkle": "+3dB @ 8kHz" } },
+            { "name": "Compression", "settings": { "Ratio": "3:1", "Style": "Optical" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drums",
+      "name": "Drums",
+      "icon": "Drum",
+      "chains": []
+    },
+    {
+      "id": "templates",
+      "name": "Templates",
+      "icon": "LayoutTemplate",
+      "chains": []
+    }
+  ]
+}

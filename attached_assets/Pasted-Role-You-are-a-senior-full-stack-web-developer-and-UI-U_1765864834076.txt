@@ -1,0 +1,215 @@
+Role:
+You are a senior full-stack web developer and UI/UX designer.
+
+🎯 AIM
+
+Build a simple, personal-use web application that showcases Mixing & Mastering Cheat Sheets for Music Production, driven entirely by a JSON file.
+
+The app will be deployed on Vercel.
+
+🧱 TECH STACK
+
+Frontend: Next.js (App Router preferred)
+
+Styling: Tailwind CSS
+
+UI Effects: Glassmorphism, smooth transitions, subtle animations
+
+State: React state + Context (if needed)
+
+Auth: Simple, lightweight authentication (email + password or password-only)
+
+Data Source: Uploaded JSON file (no database needed)
+
+Deployment: Vercel-compatible setup
+
+📂 DATA STRUCTURE (JSON-DRIVEN)
+
+All content comes from a JSON file uploaded by the user.
+
+JSON contains:
+
+Categories (Vocal, Guitar, Drums, Templates)
+
+Sub-groups (Pop Vocals, Vocal Bus, Choir Chain, etc.)
+
+Chain details:
+
+Compressor settings
+
+EQ settings
+
+Saturation
+
+Reverb / Delay
+
+Buss chain info
+
+Image URLs (Google Drive public links)
+
+Logic Pro preset download file URLs
+
+🖥️ APP FLOW / SCREENS
+🔹 1. Home Screen
+
+Grid-based layout with glassy cards
+
+Sections:
+
+🎤 Vocal
+
+🎸 Guitar
+
+🥁 Drums
+
+📦 Templates
+
+Each card has:
+
+Icon
+
+Title
+
+Subtle hover animation
+
+Top-right: Login / Logout
+
+Top-left: JSON Upload Button (file input)
+
+🔹 2. Category Screen
+
+(Example: Vocal)
+
+Shows sub-groups:
+
+Vocal Buss Chain
+
+Pop Vocals
+
+Choir Chain
+
+Rap Vocals
+
+Each item is a clickable glass card
+
+🔹 3. Chain Detail Screen
+
+Displays:
+
+Chain name
+
+Step-by-step chain:
+
+EQ (with settings)
+
+Compressor (with ratio, attack, release, threshold)
+
+Saturation
+
+FX
+
+Reference images (loaded from JSON URLs)
+
+Download Button
+
+Downloads Logic Pro chain preset (.pst / .logicx)
+
+Smooth page transition animation
+
+🔐 AUTHENTICATION
+
+Very basic auth (personal use only)
+
+Options:
+
+Password-only login OR
+
+Email + password stored locally
+
+Protect all routes except login
+
+No OAuth or external services
+
+⬆️ JSON UPLOAD
+
+File upload on Home Screen
+
+Accept .json only
+
+Parse and validate structure
+
+Store data in memory or localStorage
+
+UI updates dynamically after upload
+
+🎨 UI / UX REQUIREMENTS
+
+Clean, minimal, modern
+
+Glassmorphism:
+
+backdrop-blur
+
+translucent cards
+
+Dark theme preferred
+
+Smooth hover effects
+
+Page transitions using CSS or Framer Motion
+
+Mobile + desktop responsive
+
+Trendy but distraction-free
+
+📦 DOWNLOAD FEATURE
+
+Each chain can have a downloadable file
+
+Button:
+
+“Download Logic Pro Chain”
+
+Uses direct URL from JSON
+
+🚀 DEPLOYMENT
+
+Must be Vercel-ready
+
+Use environment variables if needed
+
+No backend server required
+
+Build output should work with vercel deploy
+
+📁 PROJECT STRUCTURE
+
+/app
+
+/components
+
+/styles
+
+/utils/jsonParser.ts
+
+/context/AuthContext.tsx
+
+/context/DataContext.tsx
+
+🧪 EXTRA (OPTIONAL BUT NICE)
+
+Search bar for chains
+
+Favorite/star chains
+
+Smooth skeleton loaders
+
+🔥 APP NAME SUGGESTIONS 
+
+Here are strong, brand-ready names:
+
+
+⭐ Best Recommendation
+
+👉 Jaymelo MixVault
+(Simple, premium, expandable)
