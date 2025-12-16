@@ -19,6 +19,8 @@ function ChainDetailPage() {
   const [showPasswordDialog, setShowPasswordDialog] = useState(false);
   const [downloadPassword, setDownloadPassword] = useState("");
   const [downloadError, setDownloadError] = useState("");
+  const [openImage, setOpenImage] = useState<string | null>(null);
+
 
   const DOWNLOAD_PASSWORD_HASH = import.meta.env.VITE_DOWNLOAD_PASSWORD_HASH || "";
 
@@ -256,11 +258,18 @@ function ChainDetailPage() {
             <div className="space-y-4">
               {chain.referenceImages.map((url, idx) => (
                 <GlassCard key={idx} className="p-2 overflow-hidden group">
-                  <div className="relative aspect-video rounded-lg overflow-hidden bg-black/50">
-                    <img 
-                      src={url} 
-                      alt={`Reference ${idx + 1}`} 
-                      className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-500 hover:scale-105 transform"
+                  <div
+                    className="relative aspect-video rounded-lg overflow-hidden bg-black/50 cursor-pointer"
+                    onClick={() => setOpenImage(url)}
+                  >
+                    <img
+                      src={url}
+                      alt={`Reference ${idx + 1}`}
+                      className="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = "/images/plugin.png";
+                      }}
                     />
                   </div>
                 </GlassCard>
@@ -270,6 +279,44 @@ function ChainDetailPage() {
         )}
       </div>
     </div>
+        <AnimatePresence>
+      {openImage && (
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setOpenImage(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="relative max-w-5xl w-full px-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={openImage}
+              alt="Preview"
+              className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl bg-black"
+              onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = "/images/plugin.png";
+             }}
+            />
+
+            <button
+              onClick={() => setOpenImage(null)}
+              className="absolute top-3 right-3 bg-black/70 text-white rounded-full h-9 w-9 flex items-center justify-center hover:bg-black/90"
+            >
+              ✕
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+
     </div>
   );
 }
