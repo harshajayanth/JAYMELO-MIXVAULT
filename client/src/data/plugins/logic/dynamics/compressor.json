@@ -1,0 +1,67 @@
+{
+    "schema_version": "1.3",
+    "plugin_id": "logic_compressor",
+    "plugin_name": "Compressor",
+    "alternate_names": [],
+    "manufacturer": "Logic",
+  
+    "category": "Dynamics",
+    "subcategory": ["Compressor"],
+  
+    "plugin_type": "Processor",
+  
+    "description": {
+      "short": "Dynamic range processor for controlling signal level.",
+      "detailed": "The Logic Pro Compressor reduces dynamic range by attenuating audio signals that exceed a set threshold, helping maintain consistent levels."
+    },
+  
+    "application": {
+      "vocals": {
+        "when_to_use": [
+          "Control dynamic range of vocal recordings",
+          "Reduce sudden peaks in vocal performance"
+        ],
+        "recommended_settings": {
+          "ratio": "3:1",
+          "attack": "Medium",
+          "release": "Auto or Medium"
+        }
+      }
+    },
+  
+    "signal_chain": {
+      "recommended_position": "After corrective EQ and before saturation or time-based effects",
+      "common_chains": [
+        "Channel EQ → Compressor → DeEsser"
+      ]
+    },
+  
+    "workflow_tips": [
+      "Avoid excessive gain reduction to maintain natural dynamics",
+      "Use make-up gain carefully to prevent loudness bias"
+    ],
+  
+    "genre_suitability": [
+      "Pop",
+      "Rock",
+      "Hip-Hop"
+    ],
+  
+    "skill_level": "Beginner",
+  
+    "cpu_usage": "Low",
+    "latency": "Zero",
+  
+    "related_plugins": [
+      "Multipressor"
+    ],
+  
+    "tags": [
+      "compression",
+      "dynamics",
+      "logic"
+    ],
+  
+    "last_updated": "2026-02-03"
+  }
+  

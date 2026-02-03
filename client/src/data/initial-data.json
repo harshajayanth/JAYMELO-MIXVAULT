@@ -63,12 +63,6 @@
       "name": "Drums",
       "icon": "Drum",
       "chains": []
-    },
-    {
-      "id": "templates",
-      "name": "Templates",
-      "icon": "LayoutTemplate",
-      "chains": []
     }
   ]
 }

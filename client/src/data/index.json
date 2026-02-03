@@ -1,0 +1,17 @@
+{
+    "schema_version": "1.3",
+    "generated_from": "manual_test_entry",
+    "vendors": ["Logic","Waves"],
+    "plugins": [
+      {
+        "plugin_id": "logic_compressor",
+        "plugin_name": "Compressor",
+        "alternate_names": [],
+        "manufacturer": "Logic",
+        "category": "Dynamics",
+        "subcategory": ["Compressor"],
+        "path": "/plugins/logic/dynamics/compressor.json"
+      }
+    ]
+  }
+  
