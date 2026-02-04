@@ -25,7 +25,7 @@ import {
   CommandShortcut,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
-import { useData } from "@/context/DataContext";
+import { useData } from "@/context/ChainDataContext";
 import { useLocation } from "wouter";
 
 export function SearchCommand() {

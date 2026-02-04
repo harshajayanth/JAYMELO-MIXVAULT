@@ -1,12 +1,17 @@
-export type DashboardTabKey = "chains" | "templates" | "plugins";
-
-export interface DashboardTab {
-  key: DashboardTabKey;
-  label: string;
-}
-
-export const DASHBOARD_TABS: DashboardTab[] = [
-  { key: "chains", label: "Chains" },
-  { key: "templates", label: "Templates" },
-  { key: "plugins", label: "Plugins" }
+export const DASHBOARD_TABS = [
+  {
+    key: "chains",
+    label: "Chains",
+    href: "/"
+  },
+  {
+    key: "templates",
+    label: "Templates",
+    href: "/templates"
+  },
+  {
+    key: "plugins",
+    label: "Plugins",
+    href: "/plugins" // 🔒 THIS IS THE KEY
+  }
 ];

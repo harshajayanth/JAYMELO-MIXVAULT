@@ -23,3 +23,4 @@ export interface Category {
 export interface AppData {
   categories: Category[];
 }
+

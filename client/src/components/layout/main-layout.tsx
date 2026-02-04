@@ -2,7 +2,6 @@ import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
 import { LogOut, Home } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { JsonUploader } from "@/components/feature/json-uploader";
 import { SearchCommand } from "@/components/feature/search-command";
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
@@ -37,7 +36,6 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
 
           <div className="flex items-center gap-3">
             <SearchCommand />
-            <JsonUploader />
             <Button
               variant="ghost"
               size="icon"

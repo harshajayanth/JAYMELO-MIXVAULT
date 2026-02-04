@@ -5,7 +5,8 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-import { DataProvider } from "@/context/DataContext";
+import { ChainDataProvider } from "@/context/ChainDataContext";
+import { PluginDataProvider } from "@/context/PluginDataContext";
 import { AuthProvider, useAuth } from "@/context/AuthContext";
 import { MainLayout } from "@/components/layout/main-layout";
 
@@ -24,11 +25,11 @@ import CategoryPage from "@/pages/category";
 import ChainDetailPage from "@/pages/chain-detail";
 
 // 🔌 Plugins (UPDATED PATHS)
-import PluginsIndexPage from "@/pages/Plugins"; 
+import PluginsIndexPage from "@/pages/Plugins/index"; 
 import PluginCategoriesPage from "@/pages/Plugins/PluginCategories";
 import PluginSubCategoriesPage from "@/pages/Plugins/PluginSubCategories";
 import PluginListPage from "@/pages/Plugins/PluginList";
-import PluginDetailPage from "@/pages/PluginDetail"; 
+import PluginDetailPage from "@/pages/PluginDetail/PluginDetail"; 
 
 // ==================
 
@@ -102,13 +103,15 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <AuthProvider>
-          <DataProvider>
+          <ChainDataProvider>
+            <PluginDataProvider>
             <MainLayout>
               <Router />
             </MainLayout>
 
             <Toaster />
-          </DataProvider>
+            </PluginDataProvider>
+          </ChainDataProvider>
         </AuthProvider>
       </TooltipProvider>
     </QueryClientProvider>

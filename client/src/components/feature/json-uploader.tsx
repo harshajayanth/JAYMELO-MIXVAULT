@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useData } from "@/context/DataContext";
+import { useData } from "@/context/ChainDataContext";
 
 export function JsonUploader() {
   const { uploadData } = useData();

@@ -1,4 +1,4 @@
-import { useData } from "@/context/DataContext";
+import { useData } from "@/context/ChainDataContext";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Link } from "wouter";
 import { getIcon } from "@/lib/icons";

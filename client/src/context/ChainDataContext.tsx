@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { AppData } from "@/lib/types";
+import { AppData } from "@/lib/chaintypes";
 import { AppDataSchema } from "@/lib/schemas";
 import { useToast } from "@/hooks/use-toast";
 import initialDataJson from "@/data/initial-data.json";
@@ -11,7 +11,7 @@ interface DataContextType {
   resetData: () => void;
 }
 
-const DataContext = createContext<DataContextType | undefined>(undefined);
+const ChainDataContext = createContext<DataContextType | undefined>(undefined);
 
 // Safely cast the JSON import to AppData after validation, or use fallback
 let validatedInitialData: AppData;
@@ -24,7 +24,7 @@ try {
   validatedInitialData = { categories: [] };
 }
 
-export function DataProvider({ children }: { children: React.ReactNode }) {
+export function ChainDataProvider({ children }: { children: React.ReactNode }) {
   const [data, setData] = useState<AppData>(validatedInitialData);
   const { toast } = useToast();
 
@@ -101,16 +101,16 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <DataContext.Provider value={{ data, uploadData, resetData }}>
+    <ChainDataContext.Provider value={{ data, uploadData, resetData }}>
       {children}
-    </DataContext.Provider>
+    </ChainDataContext.Provider>
   );
 }
 
 export function useData() {
-  const context = useContext(DataContext);
+  const context = useContext(ChainDataContext);
   if (context === undefined) {
-    throw new Error("useData must be used within a DataProvider");
+    throw new Error("useData must be used within a ChainDataProvider");
   }
   return context;
 }

@@ -10,7 +10,7 @@
         "manufacturer": "Logic",
         "category": "Dynamics",
         "subcategory": ["Compressor"],
-        "path": "/plugins/logic/dynamics/compressor.json"
+        "path": "/data/plugins/logic/dynamics/compressor.json"
       }
     ]
   }

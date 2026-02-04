@@ -1,5 +1,5 @@
 import { useRoute, Link } from "wouter";
-import { useData } from "@/context/DataContext";
+import { useData } from "@/context/ChainDataContext";
 import { GlassCard } from "@/components/ui/glass-card";
 import { getIcon } from "@/lib/icons";
 import { Button } from "@/components/ui/button";

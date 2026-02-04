@@ -1,7 +1,7 @@
 import { useState } from "react";
 import bcrypt from "bcryptjs";
 import { useRoute, Link } from "wouter";
-import { useData } from "@/context/DataContext";
+import { useData } from "@/context/ChainDataContext";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
