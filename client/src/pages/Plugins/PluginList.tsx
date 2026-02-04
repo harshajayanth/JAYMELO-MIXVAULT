@@ -1,6 +1,8 @@
 import { Link, useParams } from "wouter";
 import { useData } from "@/context/PluginDataContext";
 import { GlassCard } from "@/components/ui/glass-card";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 interface RouteParams {
   category: string;
@@ -35,15 +37,29 @@ export default function PluginListPage() {
 
   return (
     <section className="space-y-6">
-      <header>
+      <div className="space-y-2">
+      {/* Row: back arrow + title */}
+      <div className="flex items-center gap-3">
+        <Link href={`/plugins/${encodeURIComponent(decodedCategory)}`}>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="rounded-full hover:bg-white/10"
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </Button>
+        </Link>
+
         <h1 className="text-3xl font-bold text-white">
-          {decodedCategory} / {decodedSubcategory}
+         {decodedCategory} :: {decodedSubcategory}
         </h1>
-        <p className="text-muted-foreground">
-          {plugins.length}{" "}
-          {plugins.length === 1 ? "Plugin" : "Plugins"}
-        </p>
-      </header>
+      </div>
+
+      {/* Subtitle */}
+      <p className="text-muted-foreground">
+        Browse plugins by category
+      </p>
+    </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {plugins.map(plugin => (

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.3",
+  "plugin_id": "waves_l2_ultramaximizer",
+  "plugin_name": "L2 Ultramaximizer",
+  "alternate_names": ["Brickwall Limiter"],
+  "manufacturer": "Waves",
+
+  "category": "Dynamics",
+  "subcategory": ["Limiter"],
+
+  "plugin_type": "Processor",
+
+  "description": {
+    "short": "Brickwall limiter for transparent loudness control.",
+    "detailed": "The Waves L2 Ultramaximizer is a look-ahead brickwall limiter used to increase perceived loudness while preventing digital clipping."
+  },
+
+  "application": {
+    "mix_bus": {
+      "when_to_use": [
+        "Prevent clipping on the mix bus",
+        "Increase overall loudness safely"
+      ],
+      "recommended_settings": {
+        "threshold": "-3 to -6 dB",
+        "out_ceiling": "-0.1 dB",
+        "release": "Auto"
+      }
+    },
+    "mastering": {
+      "when_to_use": [
+        "Final loudness control during mastering",
+        "Ensure compliance with peak limits"
+      ],
+      "recommended_settings": {
+        "threshold": "-2 to -4 dB",
+        "out_ceiling": "-0.1 dB",
+        "dither": "On (if final export)"
+      }
+    }
+  },
+
+  "signal_chain": {
+    "recommended_position": "Last insert on mix bus or mastering chain",
+    "common_chains": [
+      "EQ → Compressor → L2 Ultramaximizer"
+    ]
+  },
+
+  "workflow_tips": [
+    "Avoid more than 4 dB of gain reduction for transparency",
+    "Always set output ceiling below 0 dBFS",
+    "Use ears, not just meters, when pushing loudness"
+  ],
+
+  "genre_suitability": [
+    "Pop",
+    "EDM",
+    "Hip-Hop",
+    "Rock"
+  ],
+
+  "skill_level": "Beginner",
+
+  "cpu_usage": "Low",
+  "latency": "Low",
+
+  "related_plugins": [
+    "L1 Ultramaximizer",
+    "L3 Multimaximizer",
+    "L4 Ultramaximizer"
+  ],
+
+  "tags": [
+    "limiter",
+    "mastering",
+    "loudness",
+    "waves"
+  ],
+
+  "last_updated": "2026-02-03"
+}

@@ -11,6 +11,15 @@
         "category": "Dynamics",
         "subcategory": ["Compressor"],
         "path": "/data/plugins/logic/dynamics/compressor.json"
+      },
+      {
+        "plugin_id": "waves_l2_ultramaximizer",
+        "plugin_name": "L2 Ultramaximizer",
+        "alternate_names": [],
+        "manufacturer": "Waves",
+        "category": "Dynamics",
+        "subcategory": ["Limiter"],
+        "path": "/data/plugins/waves/dynamics/limiter.json"
       }
     ]
   }
