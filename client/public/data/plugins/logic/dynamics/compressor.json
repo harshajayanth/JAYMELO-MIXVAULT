@@ -1,67 +1,586 @@
 {
-    "schema_version": "1.3",
-    "plugin_id": "logic_compressor",
-    "plugin_name": "Compressor",
-    "alternate_names": [],
-    "manufacturer": "Logic",
-  
-    "category": "Dynamics",
-    "subcategory": ["Compressor"],
-  
-    "plugin_type": "Processor",
-  
-    "description": {
-      "short": "Dynamic range processor for controlling signal level.",
-      "detailed": "The Logic Pro Compressor reduces dynamic range by attenuating audio signals that exceed a set threshold, helping maintain consistent levels."
-    },
-  
-    "application": {
-      "vocals": {
-        "when_to_use": [
-          "Control dynamic range of vocal recordings",
-          "Reduce sudden peaks in vocal performance"
-        ],
-        "recommended_settings": {
-          "ratio": "3:1",
-          "attack": "Medium",
-          "release": "Auto or Medium"
+  "schema_version": "2.0",
+  "plugin_id": "logic_compressor",
+  "plugin_name": "Compressor",
+  "manufacturer": "Logic Pro",
+  "developer": "Apple",
+  "plugin_type": "Dynamics Processor",
+  "category": "Dynamics",
+  "subcategory": [
+    "Compressor"
+  ],
+  "official_reference": {
+    "apple_docs": [
+      "https://support.apple.com/en-jo/guide/logicpro/lgcead9636ef/mac",
+      "https://support.apple.com/guide/logicpro-ipad/main-parameters-lpip25f51558/ipados"
+    ],
+    "educational_sources": [
+      "https://musictech.com/tutorials/logic-pro/understanding-compressor-circuit-types-in-logic/",
+      "https://www.logicprohelp.com/articles/logic-pros-compressor-circuit-types-r17/",
+      "https://whylogicprorules.com/compressor/"
+    ]
+  },
+  "models": [
+    {
+      "model_id": "platinum_digital",
+      "model_name": "Platinum Digital",
+      "circuit_type": "Digital",
+      "hardware_inspiration": "Original transparent digital Logic compressor design",
+      "character": [
+        "Transparent",
+        "Clean",
+        "Fast transient response",
+        "Low coloration"
+      ],
+      "description": {
+        "short": "Transparent modern digital compressor.",
+        "detailed": "Platinum Digital is Logic Pro's cleanest and most transparent compressor model. It provides precise dynamic control with minimal harmonic coloration, making it suitable for mastering, vocals, acoustic instruments, and transparent bus compression."
+      },
+      "ref_img": {
+        "main": "https://help.apple.com/assets/6978E8D06876B2D15B05F025/6978E8D739A802C733096958/en_US/eff60074f6da3e2ad357a19bd7953c10.png",
+        "gallery": [
+          "https://help.apple.com/assets/6978E8D06876B2D15B05F025/6978E8D739A802C733096958/en_US/eff60074f6da3e2ad357a19bd7953c10.png"
+        ]
+      },
+      "best_for": [
+        "Mastering",
+        "Pop vocals",
+        "Acoustic instruments",
+        "Mix bus glue",
+        "Clean compression"
+      ],
+      "application": {
+        "vocals": {
+          "when_to_use": [
+            "Maintain natural vocal dynamics",
+            "Control peaks without coloration"
+          ],
+          "recommended_settings": {
+            "ratio": "2:1 - 3:1",
+            "attack": "Medium",
+            "release": "Auto"
+          }
+        },
+        "master_bus": {
+          "when_to_use": [
+            "Transparent mix bus compression",
+            "Gentle mastering glue"
+          ],
+          "recommended_settings": {
+            "ratio": "1.5:1",
+            "attack": "Slow",
+            "release": "Auto"
+          }
         }
-      }
-    },
-  
-    "signal_chain": {
-      "recommended_position": "After corrective EQ and before saturation or time-based effects",
-      "common_chains": [
-        "Channel EQ → Compressor → DeEsser"
+      },
+      "workflow_tips": [
+        "Ideal for transparent compression",
+        "Excellent mastering compressor",
+        "Low ratios preserve natural dynamics"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Pop",
+          "rating": 96
+        },
+        {
+          "genre": "R&B",
+          "rating": 93
+        },
+        {
+          "genre": "Acoustic",
+          "rating": 95
+        }
       ]
     },
-  
-    "workflow_tips": [
-      "Avoid excessive gain reduction to maintain natural dynamics",
-      "Use make-up gain carefully to prevent loudness bias"
-    ],
-  
-    "genre_suitability": [
-      "Pop",
-      "Rock",
-      "Hip-Hop"
-    ],
-  
-    "skill_level": "Beginner",
-  
-    "cpu_usage": "Low",
-    "latency": "Zero",
-  
-    "related_plugins": [
-      "Multipressor"
-    ],
-  
-    "tags": [
-      "compression",
-      "dynamics",
-      "logic"
-    ],
-  
-    "last_updated": "2026-02-03"
-  }
-  
+    {
+      "model_id": "studio_vca",
+      "model_name": "Studio VCA",
+      "circuit_type": "VCA",
+      "hardware_inspiration": "Focusrite Red 3 style compressor",
+      "character": [
+        "Punchy",
+        "Controlled",
+        "Fast",
+        "Balanced",
+        "Tight"
+      ],
+      "description": {
+        "short": "Modern punchy VCA compressor.",
+        "detailed": "Studio VCA delivers fast and controlled compression with a cleaner analog-style response. It works extremely well on drums, bass, vocals, guitars, and bus compression where punch and clarity are important."
+      },
+      "ref_img": {
+        "main": "https://seandivine.com/wp-content/uploads/2017/12/Logic-Pro-X-Compressor-Studio-VCA.jpg",
+        "gallery": [
+          "https://help.apple.com/assets/66BBBD54A1A58FB80A088973/66BBBD5D4B0B777B690F7537/en_US/fbf9ec8a4f4787cf9b3d9089ca1e0614.png"
+        ]
+      },
+      "best_for": [
+        "Drum buses",
+        "Bass guitar",
+        "Rock vocals",
+        "Mix bus compression",
+        "Punchy mixes"
+      ],
+      "application": {
+        "drums": {
+          "when_to_use": [
+            "Add punch to drum buses",
+            "Tighten transient response"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium Fast",
+            "release": "Fast"
+          }
+        },
+        "bass": {
+          "when_to_use": [
+            "Control dynamic bass lines",
+            "Improve sustain"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium",
+            "release": "Medium Fast"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Excellent bus compressor",
+        "Works well for modern rock mixes",
+        "Maintains punch while controlling peaks"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Rock",
+          "rating": 95
+        },
+        {
+          "genre": "Pop",
+          "rating": 90
+        },
+        {
+          "genre": "Alternative",
+          "rating": 93
+        }
+      ]
+    },
+    {
+      "model_id": "studio_fet",
+      "model_name": "Studio FET",
+      "circuit_type": "FET",
+      "hardware_inspiration": "1176 Blackface style compressor",
+      "character": [
+        "Fast",
+        "Punchy",
+        "Aggressive",
+        "Energetic",
+        "Warm midrange"
+      ],
+      "description": {
+        "short": "Fast punchy FET compressor.",
+        "detailed": "Studio FET models fast field-effect transistor compression with energetic transient shaping and punchy dynamics. Excellent for drums, bass, rock vocals, guitars, and aggressive mixes."
+      },
+      "ref_img": {
+        "main": "https://seandivine.com/wp-content/uploads/2017/12/Logic-Pro-X-Compressor-Studio-FET.jpg",
+        "gallery": [
+          "https://help.apple.com/assets/66BBBD54A1A58FB80A088973/66BBBD5D4B0B777B690F7537/en_US/fbf9ec8a4f4787cf9b3d9089ca1e0614.png"
+        ]
+      },
+      "best_for": [
+        "Rock drums",
+        "Snare compression",
+        "Aggressive vocals",
+        "Bass guitar",
+        "Parallel compression"
+      ],
+      "application": {
+        "drums": {
+          "when_to_use": [
+            "Enhance punch and attack",
+            "Control fast transients"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1 - 8:1",
+            "attack": "Fast",
+            "release": "Fast"
+          }
+        },
+        "vocals": {
+          "when_to_use": [
+            "Aggressive rock vocals",
+            "Forward vocal presence"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium Fast",
+            "release": "Fast"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Perfect for parallel compression",
+        "Excellent transient shaping",
+        "Push input harder for analog coloration"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Rock",
+          "rating": 97
+        },
+        {
+          "genre": "Metal",
+          "rating": 98
+        },
+        {
+          "genre": "Hip-Hop",
+          "rating": 92
+        }
+      ]
+    },
+    {
+      "model_id": "classic_vca",
+      "model_name": "Classic VCA",
+      "circuit_type": "VCA",
+      "hardware_inspiration": "dbx 160 style compressor",
+      "character": [
+        "Punchy",
+        "Classic",
+        "Simple",
+        "Tight",
+        "Direct"
+      ],
+      "description": {
+        "short": "Classic punchy dbx-style compressor.",
+        "detailed": "Classic VCA models old-school dbx-style compression with strong punch and simple controls. It works particularly well on drums, bass, percussion, and energetic rhythmic material."
+      },
+      "ref_img": {
+        "main": "https://seandivine.com/wp-content/uploads/2017/12/Logic-Pro-X-Compressor-Classic-VCA.jpg",
+        "gallery": [
+          "https://help.apple.com/assets/6978E8D06876B2D15B05F025/6978E8D739A802C733096958/en_US/eff60074f6da3e2ad357a19bd7953c10.png"
+        ]
+      },
+      "best_for": [
+        "Drum compression",
+        "Percussion",
+        "Bass",
+        "Punchy transient shaping",
+        "Old-school dynamics"
+      ],
+      "application": {
+        "kick": {
+          "when_to_use": [
+            "Enhance kick drum punch",
+            "Tight low-end control"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Auto",
+            "release": "Auto"
+          }
+        },
+        "bass": {
+          "when_to_use": [
+            "Even out bass dynamics",
+            "Maintain punch"
+          ],
+          "recommended_settings": {
+            "ratio": "3:1 - 5:1",
+            "attack": "Auto",
+            "release": "Auto"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Simple and fast workflow",
+        "Great for rhythmic material",
+        "Excellent transient control"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Funk",
+          "rating": 95
+        },
+        {
+          "genre": "Rock",
+          "rating": 92
+        },
+        {
+          "genre": "Hip-Hop",
+          "rating": 90
+        }
+      ]
+    },
+    {
+      "model_id": "vintage_vca",
+      "model_name": "Vintage VCA",
+      "circuit_type": "VCA",
+      "hardware_inspiration": "SSL G Bus Compressor style",
+      "character": [
+        "Glue",
+        "Punchy",
+        "Classic analog",
+        "Smooth",
+        "Mix cohesion"
+      ],
+      "description": {
+        "short": "Classic SSL-style bus compressor.",
+        "detailed": "Vintage VCA models the classic SSL bus compressor style known for mix glue, punch, and cohesive dynamics. It is one of the best choices for drum buses and full mix compression."
+      },
+      "ref_img": {
+        "main": "https://seandivine.com/wp-content/uploads/2017/12/Logic-Pro-X-Compressor-Vintage-VCA.jpg",
+        "gallery": [
+          "https://help.apple.com/assets/66BBBD54A1A58FB80A088973/66BBBD5D4B0B777B690F7537/en_US/fbf9ec8a4f4787cf9b3d9089ca1e0614.png"
+        ]
+      },
+      "best_for": [
+        "Mix bus",
+        "Drum bus",
+        "Glue compression",
+        "Rock mixes",
+        "Electronic music"
+      ],
+      "application": {
+        "mix_bus": {
+          "when_to_use": [
+            "Glue full mixes together",
+            "Add cohesive bus compression"
+          ],
+          "recommended_settings": {
+            "ratio": "2:1",
+            "attack": "Slow",
+            "release": "Auto"
+          }
+        },
+        "drum_bus": {
+          "when_to_use": [
+            "Add punch and energy",
+            "Glue multi-mic drums"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium",
+            "release": "Fast"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Legendary mix bus sound",
+        "Use slow attack for punch",
+        "Excellent glue compressor"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Rock",
+          "rating": 98
+        },
+        {
+          "genre": "EDM",
+          "rating": 95
+        },
+        {
+          "genre": "Pop",
+          "rating": 94
+        }
+      ]
+    },
+    {
+      "model_id": "vintage_fet",
+      "model_name": "Vintage FET",
+      "circuit_type": "FET",
+      "hardware_inspiration": "1176 Silverface style compressor",
+      "character": [
+        "Aggressive",
+        "Dirty",
+        "Colorful",
+        "Explosive",
+        "Saturated"
+      ],
+      "description": {
+        "short": "Aggressive vintage FET compressor.",
+        "detailed": "Vintage FET models a gritty vintage 1176-style compressor with aggressive transient shaping, harmonic saturation, and explosive punch. Perfect for smashed drums, aggressive bass, and energetic parallel compression."
+      },
+      "ref_img": {
+        "main": "https://seandivine.com/wp-content/uploads/2017/12/Logic-Pro-X-Compressor-Vintage-FET.jpg",
+        "gallery": [
+          "https://help.apple.com/assets/6978E8D06876B2D15B05F025/6978E8D739A802C733096958/en_US/eff60074f6da3e2ad357a19bd7953c10.png"
+        ]
+      },
+      "best_for": [
+        "Parallel drum compression",
+        "Aggressive rock vocals",
+        "Snare smash",
+        "Dirty bass",
+        "Character compression"
+      ],
+      "application": {
+        "parallel_drums": {
+          "when_to_use": [
+            "Create explosive drum energy",
+            "Smash room microphones"
+          ],
+          "recommended_settings": {
+            "ratio": "20:1",
+            "attack": "Fastest",
+            "release": "Very Fast"
+          }
+        },
+        "bass": {
+          "when_to_use": [
+            "Add grit and harmonics",
+            "Enhance sustain"
+          ],
+          "recommended_settings": {
+            "ratio": "8:1",
+            "attack": "Fast",
+            "release": "Fast"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Best for aggressive compression",
+        "Excellent saturation and grit",
+        "Use for character rather than transparency"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Metal",
+          "rating": 99
+        },
+        {
+          "genre": "Hard Rock",
+          "rating": 98
+        },
+        {
+          "genre": "Punk",
+          "rating": 96
+        }
+      ]
+    },
+    {
+      "model_id": "vintage_opto",
+      "model_name": "Vintage Opto",
+      "circuit_type": "Optical",
+      "hardware_inspiration": "LA-2A style optical compressor",
+      "character": [
+        "Smooth",
+        "Warm",
+        "Musical",
+        "Gentle",
+        "Natural"
+      ],
+      "description": {
+        "short": "Smooth optical compressor.",
+        "detailed": "Vintage Opto models classic optical compression with smooth gain reduction and warm musical response. It excels on vocals, bass, acoustic instruments, and melodic material requiring natural dynamics."
+      },
+      "ref_img": {
+        "main": "https://seandivine.com/wp-content/uploads/2017/12/Logic-Pro-X-Compressor-Vintage-OPTO.jpg",
+        "gallery": [
+          "https://help.apple.com/assets/66BBBD54A1A58FB80A088973/66BBBD5D4B0B777B690F7537/en_US/fbf9ec8a4f4787cf9b3d9089ca1e0614.png"
+        ]
+      },
+      "best_for": [
+        "Lead vocals",
+        "Bass guitar",
+        "Acoustic guitar",
+        "Smooth compression",
+        "Natural dynamics"
+      ],
+      "application": {
+        "vocals": {
+          "when_to_use": [
+            "Smooth vocal leveling",
+            "Warm musical compression"
+          ],
+          "recommended_settings": {
+            "ratio": "2:1 - 3:1",
+            "attack": "Program Dependent",
+            "release": "Program Dependent"
+          }
+        },
+        "bass": {
+          "when_to_use": [
+            "Natural bass sustain",
+            "Warm low-end control"
+          ],
+          "recommended_settings": {
+            "ratio": "3:1",
+            "attack": "Slow",
+            "release": "Medium"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Excellent vocal compressor",
+        "Smooth program-dependent response",
+        "Perfect for musical leveling"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Soul",
+          "rating": 98
+        },
+        {
+          "genre": "R&B",
+          "rating": 97
+        },
+        {
+          "genre": "Jazz",
+          "rating": 95
+        }
+      ]
+    }
+  ],
+  "shared_controls": [
+    {
+      "name": "Threshold",
+      "description": "Determines the level where compression begins."
+    },
+    {
+      "name": "Ratio",
+      "description": "Controls the amount of compression applied."
+    },
+    {
+      "name": "Attack",
+      "description": "Controls how quickly compression engages."
+    },
+    {
+      "name": "Release",
+      "description": "Controls how quickly compression recovers."
+    },
+    {
+      "name": "Knee",
+      "description": "Adjusts compression transition smoothness."
+    },
+    {
+      "name": "Auto Gain",
+      "description": "Automatically compensates output gain."
+    }
+  ],
+  "related_plugins": [
+    {
+      "name": "Multipressor",
+      "type": "Multiband Compressor"
+    },
+    {
+      "name": "Limiter",
+      "type": "Limiter"
+    },
+    {
+      "name": "Adaptive Limiter",
+      "type": "Mastering Limiter"
+    }
+  ],
+  "tags": [
+    "logic-pro",
+    "compression",
+    "dynamics",
+    "vca",
+    "fet",
+    "opto",
+    "mastering",
+    "mixing"
+  ],
+  "last_updated": "2026-05-21"
+}

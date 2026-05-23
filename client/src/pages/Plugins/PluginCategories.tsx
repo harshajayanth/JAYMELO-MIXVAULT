@@ -21,18 +21,19 @@ export default function PluginCategoriesPage() {
   }
 
   // 🔒 derive categories ONLY from index.json
-  const categoriesMap = new Map<string, number>();
+  const categoriesMap = new Map<string, Set<string>>();
 
   data.plugins.forEach(plugin => {
-    const current = categoriesMap.get(plugin.category) ?? 0;
-    categoriesMap.set(plugin.category, current + 1);
+    const subcategories = categoriesMap.get(plugin.category) ?? new Set<string>();
+    plugin.subcategory.forEach(sub => subcategories.add(sub));
+    categoriesMap.set(plugin.category, subcategories);
   });
 
   const categories: CategoryCount[] = Array.from(
     categoriesMap.entries()
-  ).map(([category, count]) => ({
+  ).map(([category, subcategories]) => ({
     category,
-    count
+      count: subcategories.size
   }));
 
   return (

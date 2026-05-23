@@ -1,5 +1,7 @@
 import { Link, useParams } from "wouter";
+import { useQueries } from "@tanstack/react-query";
 import { useData } from "@/context/PluginDataContext";
+import { PluginJSONv20 } from "shared/types/plugin";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -33,6 +35,30 @@ export default function PluginSubCategoriesPage() {
     plugin => plugin.category === decodedCategory
   );
 
+  const modelCountQueries = useQueries({
+    queries: categoryPlugins.map((plugin) => ({
+      queryKey: ["plugin-json-model-count", plugin.plugin_id, plugin.path],
+      queryFn: async () => {
+        const response = await fetch(plugin.path);
+
+        if (!response.ok) {
+          throw new Error("Failed to load plugin model count");
+        }
+
+        const pluginData = (await response.json()) as Partial<PluginJSONv20>;
+        return Array.isArray(pluginData.models) ? pluginData.models.length : 1;
+      },
+      staleTime: Infinity,
+    })),
+  });
+
+  const modelCountByPluginId = new Map(
+    categoryPlugins.map((plugin, index) => [
+      plugin.plugin_id,
+      modelCountQueries[index]?.data ?? 0,
+    ])
+  );
+
   if (categoryPlugins.length === 0) {
     return (
       <p className="text-muted-foreground">
@@ -49,9 +75,10 @@ export default function PluginSubCategoriesPage() {
       return;
     }
 
+    const modelCount = modelCountByPluginId.get(plugin.plugin_id) ?? 0;
     plugin.subcategory.forEach(sub => {
       const current = subCategoryMap.get(sub) ?? 0;
-      subCategoryMap.set(sub, current + 1);
+      subCategoryMap.set(sub, current + modelCount);
     });
   });
 
@@ -111,7 +138,7 @@ export default function PluginSubCategoriesPage() {
               </h2>
 
               <p className="text-sm text-muted-foreground mt-2">
-                {sub.count} {sub.count === 1 ? "Plugin" : "Plugins"}
+                {sub.count} {sub.count === 1 ? "Model" : "Models"}
               </p>
             </GlassCard>
           </Link>
