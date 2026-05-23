@@ -1,0 +1,508 @@
+{
+  "schema_version": "2.0",
+  "plugin_id": "waves_limiter",
+  "plugin_name": "Limiter",
+  "manufacturer": "Waves",
+  "developer": "Waves Audio",
+  "plugin_type": "Dynamics Processor",
+  "category": "Dynamics",
+  "subcategory": [
+    "Limiter"
+  ],
+  "official_reference": {
+    "apple_docs": [],
+    "educational_sources": [
+      "https://www.waves.com/plugins/l2-ultramaximizer",
+      "https://www.waves.com/plugins/l1-ultramaximizer",
+      "https://www.waves.com/plugins/l3-multimaximizer",
+      "https://www.waves.com/plugins/l3-ll-multimaximizer"
+    ]
+  },
+  "models": [
+    {
+      "model_id": "l1_ultramaximizer",
+      "model_name": "L1 Ultramaximizer",
+      "circuit_type": "Digital Brickwall",
+      "hardware_inspiration": "Original Waves digital limiter design",
+      "character": [
+        "Transparent",
+        "Classic",
+        "Punchy",
+        "Clean",
+        "Controlled"
+      ],
+      "description": {
+        "short": "Classic digital brickwall limiter.",
+        "detailed": "L1 Ultramaximizer delivers transparent brickwall limiting with look-ahead peak control, preventing clipping while increasing perceived loudness for mixing and mastering workflows."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/l1-ultramaximizer.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/l1-ultramaximizer.jpg"
+        ]
+      },
+      "best_for": [
+        "Mastering",
+        "Mix bus limiting",
+        "Peak control",
+        "Broadcast limiting",
+        "Transparent loudness"
+      ],
+      "application": {
+        "mastering": {
+          "when_to_use": [
+            "Increase loudness safely",
+            "Prevent digital clipping"
+          ],
+          "recommended_settings": {
+            "threshold": "-3 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Auto"
+          }
+        },
+        "mix_bus": {
+          "when_to_use": [
+            "Control mix peaks",
+            "Maintain transparent dynamics"
+          ],
+          "recommended_settings": {
+            "threshold": "-2 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Medium"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Avoid excessive gain reduction",
+        "Excellent beginner mastering limiter",
+        "Use ARC release for transparency"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Pop",
+          "rating": 95
+        },
+        {
+          "genre": "Rock",
+          "rating": 93
+        },
+        {
+          "genre": "Broadcast",
+          "rating": 98
+        }
+      ]
+    },
+    {
+      "model_id": "l2_ultramaximizer",
+      "model_name": "L2 Ultramaximizer",
+      "circuit_type": "Digital Brickwall",
+      "hardware_inspiration": "Enhanced Waves digital limiter",
+      "character": [
+        "Transparent",
+        "Loud",
+        "Controlled",
+        "Modern",
+        "Clean"
+      ],
+      "description": {
+        "short": "Industry standard mastering limiter.",
+        "detailed": "L2 Ultramaximizer is a legendary look-ahead brickwall limiter used for mastering, loudness maximization, and clipping prevention while maintaining transparent sound quality."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/l2-ultramaximizer.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/l2-ultramaximizer.jpg"
+        ]
+      },
+      "best_for": [
+        "Mastering",
+        "Final loudness",
+        "Mix bus",
+        "Streaming loudness",
+        "Peak limiting"
+      ],
+      "application": {
+        "mastering": {
+          "when_to_use": [
+            "Finalize loudness",
+            "Prevent clipping during mastering"
+          ],
+          "recommended_settings": {
+            "threshold": "-2 to -4 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Auto"
+          }
+        },
+        "mix_bus": {
+          "when_to_use": [
+            "Catch transient peaks",
+            "Increase overall mix level"
+          ],
+          "recommended_settings": {
+            "threshold": "-3 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Medium"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Keep gain reduction moderate",
+        "Industry standard mastering tool",
+        "Excellent transparent limiter"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "EDM",
+          "rating": 98
+        },
+        {
+          "genre": "Pop",
+          "rating": 97
+        },
+        {
+          "genre": "Hip-Hop",
+          "rating": 96
+        }
+      ]
+    },
+    {
+      "model_id": "l3_multimaximizer",
+      "model_name": "L3 Multimaximizer",
+      "circuit_type": "Digital Multiband",
+      "hardware_inspiration": "Advanced Waves multiband limiter",
+      "character": [
+        "Loud",
+        "Detailed",
+        "Modern",
+        "Flexible",
+        "Powerful"
+      ],
+      "description": {
+        "short": "Multiband mastering limiter.",
+        "detailed": "L3 Multimaximizer combines multiband peak limiting with loudness maximization, offering advanced frequency-dependent limiting ideal for mastering and commercial loudness workflows."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/l3-multimaximizer.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/l3-multimaximizer.jpg"
+        ]
+      },
+      "best_for": [
+        "Mastering",
+        "Commercial loudness",
+        "Multiband peak control",
+        "Frequency-dependent limiting",
+        "Modern mastering"
+      ],
+      "application": {
+        "mastering": {
+          "when_to_use": [
+            "Maximize loudness with control",
+            "Preserve tonal balance during limiting"
+          ],
+          "recommended_settings": {
+            "threshold": "-3 dB",
+            "out_ceiling": "-0.1 dB",
+            "priority": "Low/Mid emphasis"
+          }
+        },
+        "edm": {
+          "when_to_use": [
+            "Push loudness aggressively",
+            "Control bass-heavy mixes"
+          ],
+          "recommended_settings": {
+            "threshold": "-4 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "ARC"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Excellent for commercial mastering",
+        "Use priority controls carefully",
+        "Great loudness with tonal preservation"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "EDM",
+          "rating": 99
+        },
+        {
+          "genre": "Pop",
+          "rating": 97
+        },
+        {
+          "genre": "Hip-Hop",
+          "rating": 96
+        }
+      ]
+    },
+    {
+      "model_id": "l3_ll_multimaximizer",
+      "model_name": "L3-LL Multimaximizer",
+      "circuit_type": "Low Latency Multiband",
+      "hardware_inspiration": "Low latency mastering limiter",
+      "character": [
+        "Fast",
+        "Transparent",
+        "Modern",
+        "Efficient",
+        "Controlled"
+      ],
+      "description": {
+        "short": "Low latency multiband limiter.",
+        "detailed": "L3-LL Multimaximizer provides advanced multiband loudness maximization with reduced latency, ideal for live processing, tracking, and real-time mastering workflows."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/l3-ll-multimaximizer.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/l3-ll-multimaximizer.jpg"
+        ]
+      },
+      "best_for": [
+        "Live mastering",
+        "Low latency workflows",
+        "Streaming",
+        "Broadcast",
+        "Real-time limiting"
+      ],
+      "application": {
+        "live": {
+          "when_to_use": [
+            "Limit live mixes safely",
+            "Reduce clipping in real-time"
+          ],
+          "recommended_settings": {
+            "threshold": "-2 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Fast ARC"
+          }
+        },
+        "broadcast": {
+          "when_to_use": [
+            "Maintain broadcast loudness",
+            "Ensure low latency peak control"
+          ],
+          "recommended_settings": {
+            "threshold": "-3 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Auto"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Ideal for low latency environments",
+        "Excellent for streaming workflows",
+        "Maintains transparent limiting"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Broadcast",
+          "rating": 98
+        },
+        {
+          "genre": "EDM",
+          "rating": 95
+        },
+        {
+          "genre": "Live Sound",
+          "rating": 99
+        }
+      ]
+    },
+    {
+      "model_id": "l316_multimaximizer",
+      "model_name": "L316 Multimaximizer",
+      "circuit_type": "Multichannel Multiband",
+      "hardware_inspiration": "Surround multiband limiter",
+      "character": [
+        "Immersive",
+        "Detailed",
+        "Transparent",
+        "Cinematic",
+        "Powerful"
+      ],
+      "description": {
+        "short": "Surround multichannel limiter.",
+        "detailed": "L316 Multimaximizer delivers multichannel loudness maximization and peak limiting for surround sound, film mixing, immersive audio, and advanced mastering applications."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/l316-multimaximizer.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/l316-multimaximizer.jpg"
+        ]
+      },
+      "best_for": [
+        "Surround mastering",
+        "Film mixing",
+        "Immersive audio",
+        "Post production",
+        "Multichannel limiting"
+      ],
+      "application": {
+        "film": {
+          "when_to_use": [
+            "Control multichannel peaks",
+            "Maintain cinematic loudness"
+          ],
+          "recommended_settings": {
+            "threshold": "-3 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "ARC"
+          }
+        },
+        "surround_mastering": {
+          "when_to_use": [
+            "Master immersive mixes",
+            "Preserve spatial balance"
+          ],
+          "recommended_settings": {
+            "threshold": "-2 dB",
+            "out_ceiling": "-0.1 dB",
+            "priority": "Balanced"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Excellent for surround workflows",
+        "Maintains spatial integrity",
+        "Ideal post-production limiter"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Film",
+          "rating": 99
+        },
+        {
+          "genre": "Orchestral",
+          "rating": 96
+        },
+        {
+          "genre": "Post Production",
+          "rating": 99
+        }
+      ]
+    },
+    {
+      "model_id": "l360_surround_limiter",
+      "model_name": "L360 Surround Limiter",
+      "circuit_type": "Digital Surround",
+      "hardware_inspiration": "Professional surround limiter",
+      "character": [
+        "Transparent",
+        "Professional",
+        "Precise",
+        "Immersive",
+        "Controlled"
+      ],
+      "description": {
+        "short": "Professional surround peak limiter.",
+        "detailed": "L360 Surround Limiter provides transparent multichannel peak limiting for professional surround production, broadcast compliance, and immersive audio workflows."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/l360-surround-limiter.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/l360-surround-limiter.jpg"
+        ]
+      },
+      "best_for": [
+        "Broadcast",
+        "Surround sound",
+        "Film post-production",
+        "Immersive audio",
+        "Peak protection"
+      ],
+      "application": {
+        "broadcast": {
+          "when_to_use": [
+            "Prevent broadcast clipping",
+            "Maintain surround compliance"
+          ],
+          "recommended_settings": {
+            "threshold": "-2 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Auto"
+          }
+        },
+        "post_production": {
+          "when_to_use": [
+            "Protect cinematic mixes",
+            "Maintain multichannel consistency"
+          ],
+          "recommended_settings": {
+            "threshold": "-3 dB",
+            "out_ceiling": "-0.1 dB",
+            "release": "Medium"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Ideal for professional post workflows",
+        "Excellent transparent surround limiting",
+        "Maintains immersive balance"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Film",
+          "rating": 99
+        },
+        {
+          "genre": "Broadcast",
+          "rating": 98
+        },
+        {
+          "genre": "Post Production",
+          "rating": 99
+        }
+      ]
+    }
+  ],
+  "shared_controls": [
+    {
+      "name": "Threshold",
+      "description": "Determines the level where limiting begins."
+    },
+    {
+      "name": "Out Ceiling",
+      "description": "Sets maximum output level to prevent clipping."
+    },
+    {
+      "name": "Release",
+      "description": "Controls limiter recovery speed."
+    },
+    {
+      "name": "ARC",
+      "description": "Automatic Release Control for transparent limiting."
+    },
+    {
+      "name": "Dither",
+      "description": "Applies dithering during final export."
+    }
+  ],
+  "related_plugins": [
+    {
+      "name": "L2 Ultramaximizer",
+      "type": "Limiter"
+    },
+    {
+      "name": "C4",
+      "type": "Multiband Compressor"
+    },
+    {
+      "name": "SSL G-Master Buss Compressor",
+      "type": "Compressor"
+    }
+  ],
+  "tags": [
+    "waves",
+    "limiter",
+    "mastering",
+    "loudness",
+    "brickwall",
+    "multiband",
+    "mixing",
+    "peak_control"
+  ],
+  "last_updated": "2026-05-23"
+}
