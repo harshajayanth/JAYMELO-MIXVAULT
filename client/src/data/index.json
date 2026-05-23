@@ -5,7 +5,7 @@
     "plugins": [
       {
         "plugin_id": "logic_compressor",
-        "plugin_name": "Compressor",
+        "plugin_name": "Logic Compressors",
         "alternate_names": [],
         "manufacturer": "Logic",
         "category": "Dynamics",
@@ -13,8 +13,17 @@
         "path": "/data/plugins/logic/dynamics/compressor.json"
       },
       {
-        "plugin_id": "waves_l2_ultramaximizer",
-        "plugin_name": "L2 Ultramaximizer",
+        "plugin_id": "waves_compressor",
+        "plugin_name": "Waves Compressors",
+        "alternate_names": [],
+        "manufacturer": "Waves",
+        "category": "Dynamics",
+        "subcategory": ["Compressor"],
+        "path": "/data/plugins/waves/dynamics/compressor.json"
+      },
+      {
+        "plugin_id": "waves_limiter",
+        "plugin_name": "Limiter",
         "alternate_names": [],
         "manufacturer": "Waves",
         "category": "Dynamics",

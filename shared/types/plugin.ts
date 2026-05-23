@@ -1,59 +1,63 @@
-/**
- * 🔒 Plugin-level JSON v1.3
- * This file MUST mirror every plugin JSON exactly.
- * Used ONLY for plugin detail pages.
- */
-
-/* ---------- Application Block ---------- */
-export interface PluginApplicationBlock {
-  when_to_use: string[];
-  recommended_settings: Record<string, string>;
-}
-
-/* ---------- Plugin JSON Root ---------- */
-export interface PluginJSONv13 {
-  schema_version: "1.3";
-
-  /* ---------- Identity ---------- */
+export interface PluginJSONv20 {
+  schema_version: string;
   plugin_id: string;
   plugin_name: string;
-  alternate_names: string[];
-  manufacturer: "Logic" | "Waves";
-
-  /* ---------- Classification ---------- */
+  manufacturer: string;
+  developer: string;
+  plugin_type: string;
   category: string;
   subcategory: string[];
+  official_reference: PluginOfficialReference;
+  models: PluginModel[];
+  shared_controls: PluginSharedControl[];
+  related_plugins: PluginRelatedPlugin[];
+  tags: string[];
+  last_updated: string;
+}
 
-  plugin_type: "Processor" | "Instrument" | "Utility";
+export interface PluginOfficialReference {
+  apple_docs: string[];
+  educational_sources: string[];
+}
 
-  /* ---------- Description ---------- */
+export interface PluginModel {
+  model_id: string;
+  model_name: string;
+  circuit_type: string;
+  hardware_inspiration: string;
+  character: string[];
   description: {
     short: string;
     detailed: string;
   };
-
-  /* ---------- Application ---------- */
-  application: Record<string, PluginApplicationBlock>;
-
-  /* ---------- Signal Chain (TEXT ONLY) ---------- */
-  signal_chain: {
-    recommended_position: string;
-    common_chains: string[];
+  ref_img: {
+    main: string;
+    gallery?: string[];
   };
-
-  /* ---------- Usage ---------- */
+  best_for: string[];
+  application: Record<
+    string,
+    {
+      when_to_use: string[];
+      recommended_settings: Record<string, string>;
+    }
+  >;
   workflow_tips: string[];
-  genre_suitability: string[];
-
-  /* ---------- Metadata ---------- */
-  skill_level: "Beginner" | "Intermediate" | "Advanced";
-  cpu_usage: "Low" | "Medium" | "High";
-  latency: "Zero" | "Low" | "Medium" | "High";
-
-  /* ---------- Relations ---------- */
-  related_plugins: string[];
-  tags: string[];
-
-  /* ---------- Versioning ---------- */
-  last_updated: string; // YYYY-MM-DD
+  genre_suitability: {
+    genre: string;
+    rating: number;
+  }[];
 }
+
+export interface PluginSharedControl {
+  name: string;
+  description: string;
+}
+
+export interface PluginRelatedPlugin {
+  name: string;
+  type: string;
+}
+
+export type PluginJSONv15 = PluginJSONv20;
+export type PluginJSONv13 = PluginJSONv20;

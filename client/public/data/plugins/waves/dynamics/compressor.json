@@ -1,0 +1,944 @@
+{
+  "schema_version": "2.0",
+  "plugin_id": "waves_compressor",
+  "plugin_name": "Compressor",
+  "manufacturer": "Waves",
+  "developer": "Waves Audio",
+  "plugin_type": "Dynamics Processor",
+  "category": "Dynamics",
+  "subcategory": [
+    "Compressor"
+  ],
+  "official_reference": {
+    "apple_docs": [],
+    "educational_sources": [
+      "https://www.waves.com/plugins/cla-76-compressor-limiter",
+      "https://www.waves.com/plugins/cla-2a-compressor-limiter"
+    ]
+  },
+  "models": [
+    {
+      "model_id": "cla_76",
+      "model_name": "CLA-76",
+      "circuit_type": "FET",
+      "hardware_inspiration": "1176 style compressor",
+      "character": [
+        "Aggressive",
+        "Punchy",
+        "Fast",
+        "Energetic",
+        "Analog"
+      ],
+      "description": {
+        "short": "Fast aggressive FET compressor.",
+        "detailed": "CLA-76 models classic 1176-style FET compression with explosive attack response, aggressive tone, and punchy transient shaping ideal for drums, vocals, bass, and parallel compression."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/cla-76-compressor-limiter.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/cla-76-compressor-limiter.jpg"
+        ]
+      },
+      "best_for": [
+        "Rock drums",
+        "Aggressive vocals",
+        "Bass guitar",
+        "Parallel compression",
+        "Snare punch"
+      ],
+      "application": {
+        "drums": {
+          "when_to_use": [
+            "Enhance drum punch",
+            "Shape aggressive transients"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Fast",
+            "release": "Fast"
+          }
+        },
+        "vocals": {
+          "when_to_use": [
+            "Push vocals forward",
+            "Create energetic vocal compression"
+          ],
+          "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium Fast",
+            "release": "Fast"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Excellent for parallel compression",
+        "Push input harder for saturation",
+        "Use fast release for energy"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "Rock",
+          "rating": 98
+        },
+        {
+          "genre": "Metal",
+          "rating": 97
+        },
+        {
+          "genre": "Hip-Hop",
+          "rating": 92
+        }
+      ]
+    },
+    {
+      "model_id": "cla_2a",
+      "model_name": "CLA-2A",
+      "circuit_type": "Optical",
+      "hardware_inspiration": "LA-2A style optical compressor",
+      "character": [
+        "Smooth",
+        "Warm",
+        "Natural",
+        "Musical",
+        "Vintage"
+      ],
+      "description": {
+        "short": "Smooth vintage optical compressor.",
+        "detailed": "CLA-2A models classic optical tube compression with warm tone, smooth gain reduction, and natural musical dynamics ideal for vocals, bass, and acoustic instruments."
+      },
+      "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/cla-2a-compressor-limiter.jpg",
+        "gallery": [
+          "https://www.waves.com/1lib/images/plugins/cla-2a-compressor-limiter.jpg"
+        ]
+      },
+      "best_for": [
+        "Vocals",
+        "Bass guitar",
+        "Acoustic guitar",
+        "Smooth leveling",
+        "Warm compression"
+      ],
+      "application": {
+        "vocals": {
+          "when_to_use": [
+            "Smooth vocal dynamics",
+            "Natural vocal leveling"
+          ],
+          "recommended_settings": {
+            "ratio": "3:1",
+            "attack": "Program Dependent",
+            "release": "Program Dependent"
+          }
+        },
+        "bass": {
+          "when_to_use": [
+            "Control bass sustain",
+            "Warm low-end shaping"
+          ],
+          "recommended_settings": {
+            "ratio": "3:1",
+            "attack": "Slow",
+            "release": "Medium"
+          }
+        }
+      },
+      "workflow_tips": [
+        "Excellent vocal compressor",
+        "Very musical response",
+        "Perfect serial compressor"
+      ],
+      "genre_suitability": [
+        {
+          "genre": "R&B",
+          "rating": 98
+        },
+        {
+          "genre": "Soul",
+          "rating": 99
+        },
+        {
+          "genre": "Jazz",
+          "rating": 95
+        }
+      ]
+    },
+    {
+  "model_id": "cla_3a",
+  "model_name": "CLA-3A",
+  "circuit_type": "Optical",
+  "hardware_inspiration": "LA-3A style optical compressor",
+  "character": [
+    "Punchy",
+    "Focused",
+    "Warm",
+    "Forward",
+    "Smooth"
+  ],
+  "description": {
+    "short": "Punchy optical compressor.",
+    "detailed": "CLA-3A models classic LA-3A optical compression with faster transient response than traditional tube optical compressors. It provides punchy dynamics, focused midrange, and smooth analog warmth ideal for guitars, vocals, and bass."
+  },
+  "ref_img": {
+    "main": "https://www.waves.com/1lib/images/plugins/cla-3a-compressor-limiter.jpg",
+    "gallery": [
+      "https://www.waves.com/1lib/images/plugins/cla-3a-compressor-limiter.jpg"
+    ]
+  },
+  "best_for": [
+    "Electric guitars",
+    "Vocals",
+    "Bass guitar",
+    "Rock instruments",
+    "Midrange control"
+  ],
+  "application": {
+    "guitars": {
+      "when_to_use": [
+        "Enhance guitar sustain",
+        "Add punch to rhythm guitars"
+      ],
+      "recommended_settings": {
+        "ratio": "3:1",
+        "attack": "Fast Optical",
+        "release": "Medium"
+      }
+    },
+    "vocals": {
+      "when_to_use": [
+        "Maintain vocal presence",
+        "Control dynamic vocals naturally"
+      ],
+      "recommended_settings": {
+        "ratio": "3:1",
+        "attack": "Medium",
+        "release": "Medium"
+      }
+    }
+  },
+  "workflow_tips": [
+    "Excellent guitar compressor",
+    "Faster than CLA-2A",
+    "Great midrange presence"
+  ],
+  "genre_suitability": [
+    {
+      "genre": "Rock",
+      "rating": 96
+    },
+    {
+      "genre": "Alternative",
+      "rating": 94
+    },
+    {
+      "genre": "Blues",
+      "rating": 93
+    }
+  ]
+    },
+    {
+    "model_id": "api_2500",
+    "model_name": "API 2500",
+    "circuit_type": "VCA",
+    "hardware_inspiration": "API 2500 stereo bus compressor",
+    "character": [
+        "Punchy",
+        "Glue",
+        "Aggressive",
+        "Thick",
+        "Analog"
+    ],
+    "description": {
+        "short": "Punchy analog bus compressor.",
+        "detailed": "API 2500 delivers classic API bus compression with strong punch, analog glue, aggressive transient shaping, and powerful low-end response. Ideal for drums, mix buses, and energetic mixes."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/api-2500.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/api-2500.jpg"
+        ]
+    },
+    "best_for": [
+        "Drum bus",
+        "Mix bus",
+        "Rock mixes",
+        "Parallel compression",
+        "Punchy mastering"
+    ],
+    "application": {
+        "mix_bus": {
+        "when_to_use": [
+            "Glue full mixes together",
+            "Add analog cohesion"
+        ],
+        "recommended_settings": {
+            "ratio": "2:1",
+            "attack": "Slow",
+            "release": "Auto"
+        }
+        },
+        "drum_bus": {
+        "when_to_use": [
+            "Enhance punch and weight",
+            "Shape drum transients"
+        ],
+        "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium",
+            "release": "Fast"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Use thrust mode for punch",
+        "Excellent stereo bus compressor",
+        "Adds strong analog glue"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Rock",
+        "rating": 98
+        },
+        {
+        "genre": "Hip-Hop",
+        "rating": 95
+        },
+        {
+        "genre": "EDM",
+        "rating": 94
+        }
+    ]
+    },
+    {
+    "model_id": "ssl_g_master_bus",
+    "model_name": "SSL G-Master Buss Compressor",
+    "circuit_type": "VCA",
+    "hardware_inspiration": "SSL G Series Bus Compressor",
+    "character": [
+        "Glue",
+        "Punchy",
+        "Cohesive",
+        "Classic",
+        "Smooth"
+    ],
+    "description": {
+        "short": "Legendary SSL bus compressor.",
+        "detailed": "SSL G-Master Buss Compressor delivers the iconic SSL mix glue sound with cohesive stereo bus compression, punchy dynamics, and smooth analog behavior ideal for professional mix buses."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/ssl-g-master-buss-compressor.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/ssl-g-master-buss-compressor.jpg"
+        ]
+    },
+    "best_for": [
+        "Mix bus",
+        "Master bus",
+        "Drum bus",
+        "Glue compression",
+        "Commercial mixes"
+    ],
+    "application": {
+        "mix_bus": {
+        "when_to_use": [
+            "Glue mixes together",
+            "Create cohesive stereo image"
+        ],
+        "recommended_settings": {
+            "ratio": "2:1",
+            "attack": "Slow",
+            "release": "Auto"
+        }
+        },
+        "drum_bus": {
+        "when_to_use": [
+            "Add punch and movement",
+            "Enhance bus cohesion"
+        ],
+        "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium",
+            "release": "Fast"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Legendary mix bus compressor",
+        "Use low gain reduction for mastering",
+        "Slow attack preserves punch"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Pop",
+        "rating": 97
+        },
+        {
+        "genre": "Rock",
+        "rating": 98
+        },
+        {
+        "genre": "EDM",
+        "rating": 95
+        }
+    ]
+    },
+    {
+    "model_id": "puigchild_670",
+    "model_name": "PuigChild 670",
+    "circuit_type": "Vari-Mu",
+    "hardware_inspiration": "Fairchild 670 tube compressor",
+    "character": [
+        "Warm",
+        "Vintage",
+        "Huge",
+        "Smooth",
+        "Tube saturation"
+    ],
+    "description": {
+        "short": "Vintage vari-mu tube compressor.",
+        "detailed": "PuigChild 670 models the legendary Fairchild 670 compressor with smooth vari-mu tube compression, rich harmonic saturation, and vintage analog warmth ideal for mastering, vocals, and stereo bus processing."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/puigchild-compressors.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/puigchild-compressors.jpg"
+        ]
+    },
+    "best_for": [
+        "Mastering",
+        "Vocals",
+        "Stereo bus",
+        "Vintage coloration",
+        "Tube warmth"
+    ],
+    "application": {
+        "master_bus": {
+        "when_to_use": [
+            "Add vintage mastering glue",
+            "Enhance analog warmth"
+        ],
+        "recommended_settings": {
+            "ratio": "Variable Mu",
+            "attack": "Medium",
+            "release": "Slow"
+        }
+        },
+        "vocals": {
+        "when_to_use": [
+            "Smooth vocal compression",
+            "Add tube richness"
+        ],
+        "recommended_settings": {
+            "ratio": "Gentle",
+            "attack": "Medium",
+            "release": "Medium Slow"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Excellent mastering compressor",
+        "Adds vintage analog depth",
+        "Great tube coloration"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Jazz",
+        "rating": 97
+        },
+        {
+        "genre": "Soul",
+        "rating": 96
+        },
+        {
+        "genre": "Orchestral",
+        "rating": 94
+        }
+    ]
+    },
+    {
+    "model_id": "dbx_160",
+    "model_name": "dbx 160",
+    "circuit_type": "VCA",
+    "hardware_inspiration": "dbx 160 compressor",
+    "character": [
+        "Punchy",
+        "Tight",
+        "Fast",
+        "Classic",
+        "Direct"
+    ],
+    "description": {
+        "short": "Classic punchy VCA compressor.",
+        "detailed": "dbx 160 delivers aggressive transient shaping, punchy VCA compression, and tight low-end response ideal for kick drums, bass, percussion, and energetic rhythmic material."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/dbx-160-compressor-limiter.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/dbx-160-compressor-limiter.jpg"
+        ]
+    },
+    "best_for": [
+        "Kick drums",
+        "Bass guitar",
+        "Percussion",
+        "Punchy transient shaping",
+        "Rhythmic control"
+    ],
+    "application": {
+        "kick": {
+        "when_to_use": [
+            "Enhance kick drum punch",
+            "Control low-end transients"
+        ],
+        "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Fast",
+            "release": "Fast"
+        }
+        },
+        "bass": {
+        "when_to_use": [
+            "Tighten bass dynamics",
+            "Maintain aggressive punch"
+        ],
+        "recommended_settings": {
+            "ratio": "3:1",
+            "attack": "Medium",
+            "release": "Medium Fast"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Excellent drum compressor",
+        "Great transient control",
+        "Perfect for punchy mixes"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Funk",
+        "rating": 98
+        },
+        {
+        "genre": "Rock",
+        "rating": 94
+        },
+        {
+        "genre": "Hip-Hop",
+        "rating": 92
+        }
+    ]
+    },
+    {
+  "model_id": "renaissance_compressor",
+  "model_name": "Renaissance Compressor",
+  "circuit_type": "Digital Hybrid",
+  "hardware_inspiration": "Original Waves hybrid compressor design",
+  "character": [
+    "Smooth",
+    "Flexible",
+    "Warm",
+    "Transparent",
+    "Versatile"
+  ],
+  "description": {
+    "short": "Versatile hybrid compressor.",
+    "detailed": "Renaissance Compressor combines analog warmth with digital precision, offering smooth compression behavior and flexible dynamic control suitable for vocals, buses, instruments, and mastering."
+  },
+  "ref_img": {
+    "main": "https://www.waves.com/1lib/images/plugins/renaissance-compressor.jpg",
+    "gallery": [
+      "https://www.waves.com/1lib/images/plugins/renaissance-compressor.jpg"
+    ]
+  },
+  "best_for": [
+    "Vocals",
+    "General mixing",
+    "Mix buses",
+    "Transparent compression",
+    "Mastering"
+  ],
+  "application": {
+    "vocals": {
+      "when_to_use": [
+        "Maintain smooth vocal dynamics",
+        "Control peaks transparently"
+      ],
+      "recommended_settings": {
+        "ratio": "3:1",
+        "attack": "Medium",
+        "release": "Auto"
+      }
+    },
+    "mix_bus": {
+      "when_to_use": [
+        "Gentle stereo bus glue",
+        "Transparent mix cohesion"
+      ],
+      "recommended_settings": {
+        "ratio": "2:1",
+        "attack": "Slow",
+        "release": "Auto"
+      }
+    }
+  },
+  "workflow_tips": [
+    "Very flexible compressor",
+    "Excellent for clean compression",
+    "Great all-purpose dynamics processor"
+  ],
+  "genre_suitability": [
+    {
+      "genre": "Pop",
+      "rating": 95
+    },
+    {
+      "genre": "R&B",
+      "rating": 94
+    },
+    {
+      "genre": "EDM",
+      "rating": 91
+    }
+  ]
+    },
+    {
+    "model_id": "h_comp",
+    "model_name": "H-Comp",
+    "circuit_type": "Hybrid",
+    "hardware_inspiration": "Modern analog/digital hybrid compressor",
+    "character": [
+        "Punchy",
+        "Modern",
+        "Flexible",
+        "Warm",
+        "Dynamic"
+    ],
+    "description": {
+        "short": "Modern hybrid compressor.",
+        "detailed": "H-Comp combines analog-modeled dynamics with modern digital workflow features including BPM sync, punch control, and flexible transient shaping for modern music production."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/h-comp-hybrid-compressor.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/h-comp-hybrid-compressor.jpg"
+        ]
+    },
+    "best_for": [
+        "Electronic music",
+        "Drums",
+        "Modern production",
+        "Creative compression",
+        "Punch shaping"
+    ],
+    "application": {
+        "drums": {
+        "when_to_use": [
+            "Add punch to drums",
+            "Shape transient energy"
+        ],
+        "recommended_settings": {
+            "ratio": "4:1",
+            "attack": "Medium Fast",
+            "release": "Tempo Sync"
+        }
+        },
+        "electronic": {
+        "when_to_use": [
+            "Sync compression rhythmically",
+            "Enhance EDM groove"
+        ],
+        "recommended_settings": {
+            "ratio": "3:1",
+            "attack": "Fast",
+            "release": "BPM Sync"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Use BPM sync for rhythmic pumping",
+        "Excellent modern compressor",
+        "Punch control adds transient flexibility"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "EDM",
+        "rating": 98
+        },
+        {
+        "genre": "Pop",
+        "rating": 93
+        },
+        {
+        "genre": "Hip-Hop",
+        "rating": 94
+        }
+    ]
+    },
+    {
+    "model_id": "c1_compressor",
+    "model_name": "C1 Compressor",
+    "circuit_type": "Digital",
+    "hardware_inspiration": "Original Waves digital compressor",
+    "character": [
+        "Clean",
+        "Precise",
+        "Transparent",
+        "Clinical",
+        "Controlled"
+    ],
+    "description": {
+        "short": "Precise transparent compressor.",
+        "detailed": "C1 Compressor provides highly accurate digital dynamics control with transparent compression behavior, ideal for corrective mixing, broadcasting, and surgical dynamic shaping."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/c1-compressor.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/c1-compressor.jpg"
+        ]
+    },
+    "best_for": [
+        "Transparent compression",
+        "Broadcast processing",
+        "Corrective mixing",
+        "Dialogue",
+        "Clean dynamics control"
+    ],
+    "application": {
+        "dialogue": {
+        "when_to_use": [
+            "Control dialogue dynamics cleanly",
+            "Maintain speech intelligibility"
+        ],
+        "recommended_settings": {
+            "ratio": "2:1",
+            "attack": "Fast",
+            "release": "Medium"
+        }
+        },
+        "mastering": {
+        "when_to_use": [
+            "Transparent mastering compression",
+            "Corrective dynamics control"
+        ],
+        "recommended_settings": {
+            "ratio": "1.5:1",
+            "attack": "Slow",
+            "release": "Auto"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Excellent corrective compressor",
+        "Very transparent response",
+        "Ideal for technical workflows"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Broadcast",
+        "rating": 98
+        },
+        {
+        "genre": "Podcast",
+        "rating": 97
+        },
+        {
+        "genre": "Classical",
+        "rating": 92
+        }
+    ]
+    },
+    {
+    "model_id": "c4_multiband",
+    "model_name": "C4 Multiband Compressor",
+    "circuit_type": "Digital Multiband",
+    "hardware_inspiration": "Original Waves multiband design",
+    "character": [
+        "Precise",
+        "Flexible",
+        "Controlled",
+        "Detailed",
+        "Transparent"
+    ],
+    "description": {
+        "short": "Four-band multiband compressor.",
+        "detailed": "C4 Multiband Compressor offers independent dynamic control across four frequency bands, ideal for mastering, tonal balancing, de-essing, and frequency-specific compression."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/c4-multiband-compressor.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/c4-multiband-compressor.jpg"
+        ]
+    },
+    "best_for": [
+        "Mastering",
+        "Frequency control",
+        "De-essing",
+        "Mix cleanup",
+        "Tonal balancing"
+    ],
+    "application": {
+        "mastering": {
+        "when_to_use": [
+            "Control problematic frequencies",
+            "Enhance tonal balance"
+        ],
+        "recommended_settings": {
+            "ratio": "1.5:1 - 2:1",
+            "attack": "Medium",
+            "release": "Auto"
+        }
+        },
+        "vocals": {
+        "when_to_use": [
+            "Dynamic de-essing",
+            "Control harsh frequencies"
+        ],
+        "recommended_settings": {
+            "ratio": "2:1",
+            "attack": "Fast",
+            "release": "Fast"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Excellent mastering processor",
+        "Use gentle ratios for transparency",
+        "Ideal for frequency-specific compression"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Mastering",
+        "rating": 99
+        },
+        {
+        "genre": "Pop",
+        "rating": 94
+        },
+        {
+        "genre": "Film",
+        "rating": 95
+        }
+    ]
+    },
+    {
+    "model_id": "c6_multiband",
+    "model_name": "C6 Multiband Compressor",
+    "circuit_type": "Digital Multiband",
+    "hardware_inspiration": "Advanced Waves multiband processor",
+    "character": [
+        "Advanced",
+        "Flexible",
+        "Transparent",
+        "Precise",
+        "Dynamic"
+    ],
+    "description": {
+        "short": "Advanced six-band dynamic processor.",
+        "detailed": "C6 Multiband Compressor extends multiband dynamics processing with floating frequency bands, advanced sidechain control, and highly surgical dynamic processing capabilities."
+    },
+    "ref_img": {
+        "main": "https://www.waves.com/1lib/images/plugins/c6-multiband-compressor.jpg",
+        "gallery": [
+        "https://www.waves.com/1lib/images/plugins/c6-multiband-compressor.jpg"
+        ]
+    },
+    "best_for": [
+        "Advanced mastering",
+        "Dynamic EQ tasks",
+        "Surgical compression",
+        "Frequency resonance control",
+        "Mix cleanup"
+    ],
+    "application": {
+        "mastering": {
+        "when_to_use": [
+            "Dynamic frequency balancing",
+            "Control harsh resonances"
+        ],
+        "recommended_settings": {
+            "ratio": "1.5:1",
+            "attack": "Medium",
+            "release": "Auto"
+        }
+        },
+        "vocals": {
+        "when_to_use": [
+            "Dynamic de-essing",
+            "Control harsh upper mids"
+        ],
+        "recommended_settings": {
+            "ratio": "2:1",
+            "attack": "Fast",
+            "release": "Fast"
+        }
+        }
+    },
+    "workflow_tips": [
+        "Very advanced multiband processor",
+        "Excellent for dynamic EQ workflows",
+        "Ideal for mastering engineers"
+    ],
+    "genre_suitability": [
+        {
+        "genre": "Mastering",
+        "rating": 99
+        },
+        {
+        "genre": "EDM",
+        "rating": 95
+        },
+        {
+        "genre": "Film",
+        "rating": 96
+        }
+    ]
+    }
+  ],
+  "shared_controls": [
+    {
+      "name": "Threshold",
+      "description": "Determines the level where compression begins."
+    },
+    {
+      "name": "Ratio",
+      "description": "Controls the amount of compression applied."
+    },
+    {
+      "name": "Attack",
+      "description": "Controls how quickly compression engages."
+    },
+    {
+      "name": "Release",
+      "description": "Controls how quickly compression recovers."
+    },
+    {
+      "name": "Makeup Gain",
+      "description": "Compensates output level after compression."
+    }
+  ],
+  "related_plugins": [
+    {
+      "name": "C6",
+      "type": "Multiband Compressor"
+    },
+    {
+      "name": "L2 Ultramaximizer",
+      "type": "Limiter"
+    },
+    {
+      "name": "Renaissance Compressor",
+      "type": "Compressor"
+    }
+  ],
+  "tags": [
+    "waves",
+    "compression",
+    "dynamics",
+    "vca",
+    "fet",
+    "opto",
+    "mastering",
+    "mixing"
+  ],
+  "last_updated": "2026-05-21"
+}
